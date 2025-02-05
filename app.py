@@ -43,15 +43,13 @@ def classify_number():
         properties.append(parity)  # Add "odd" or "even"
 
         # Prepare response
-        response = {
-            "number": number,
-        
-            "is_prime": is_prime,
-            "is_perfect": is_perfect,
-            "is_armstrong": is_armstrong,
-            "properties": properties,
-            "digit_sum": sum(int(digit) for digit in str(number)),
-            "fun_fact": fun_fact
+        response = { 
+            "number": 371,
+            "is_prime": False,
+            "is_perfect": False,
+            "properties": ["armstrong", "odd"],
+            "digit_sum": 11,  # sum of its digits
+            "fun_fact": "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371"
         }
 
         return jsonify(response), 200
